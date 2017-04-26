@@ -1,0 +1,719 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://nats.io">nats (v0.7.16)</a>
+</h1>
+<h4>Node.js client for NATS, a lightweight, high-performance cloud native messaging system</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nats">module nats</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.NatsError">
+            function <span class="apidocSignatureSpan">nats.</span>NatsError
+            <span class="apidocSignatureSpan">(message, code, chainedError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.NatsError.super_">
+            function <span class="apidocSignatureSpan">nats.</span>NatsError.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.connect">
+            function <span class="apidocSignatureSpan">nats.</span>connect
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.createInbox">
+            function <span class="apidocSignatureSpan">nats.</span>createInbox
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>nats</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>BAD_AUTHENTICATION</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>BAD_JSON</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>BAD_MSG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>BAD_REPLY</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>BAD_SUBJECT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>CLIENT_CERT_REQ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>CONN_CLOSED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>INVALID_ENCODING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>NATS_PROTOCOL_ERR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>NON_SECURE_CONN_REQ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>REQ_TIMEOUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>SECURE_CONN_REQ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nats.NatsError">module nats.NatsError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.NatsError.NatsError">
+            function <span class="apidocSignatureSpan">nats.</span>NatsError
+            <span class="apidocSignatureSpan">(message, code, chainedError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.NatsError.super_">
+            function <span class="apidocSignatureSpan">nats.NatsError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nats.NatsError.super_">module nats.NatsError.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.NatsError.super_.super_">
+            function <span class="apidocSignatureSpan">nats.NatsError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.NatsError.super_.captureStackTrace">
+            function <span class="apidocSignatureSpan">nats.NatsError.super_.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nats.NatsError.super_.</span>stackTraceLimit</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nats.nats">module nats.nats</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.nats.NatsError">
+            function <span class="apidocSignatureSpan">nats.nats.</span>NatsError
+            <span class="apidocSignatureSpan">(message, code, chainedError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.nats.connect">
+            function <span class="apidocSignatureSpan">nats.nats.</span>connect
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nats.nats.createInbox">
+            function <span class="apidocSignatureSpan">nats.nats.</span>createInbox
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>BAD_AUTHENTICATION</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>BAD_JSON</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>BAD_MSG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>BAD_REPLY</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>BAD_SUBJECT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>CLIENT_CERT_REQ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>CONN_CLOSED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>INVALID_ENCODING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>NATS_PROTOCOL_ERR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>NON_SECURE_CONN_REQ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>REQ_TIMEOUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>SECURE_CONN_REQ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nats.nats.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nats" id="apidoc.module.nats">module nats</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nats.NatsError" id="apidoc.element.nats.NatsError">
+        function <span class="apidocSignatureSpan">nats.</span>NatsError
+        <span class="apidocSignatureSpan">(message, code, chainedError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NatsError(message, code, chainedError) {
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.code = code;
+  this.chainedError = chainedError;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  nc.close();
+  // Closed
+  (function() { nc.subscribe('foo'); }).should.throw(Error);
+  done();
+});
+
+it ('NatsErrors have code', function() {
+  var err = new NATS.<span class="apidocCodeKeywordSpan">NatsError</span>("hello", "helloid");
+  should.equal(err.message, 'hello');
+  should.equal(err.code, 'helloid');
+});
+
+it ('NatsErrors can chain an error', function() {
+  var srcErr = new Error('foo');
+  var err = new NATS.NatsError("hello", "helloid", srcErr);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.NatsError.super_" id="apidoc.element.nats.NatsError.super_">
+        function <span class="apidocSignatureSpan">nats.</span>NatsError.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.connect" id="apidoc.element.nats.connect">
+        function <span class="apidocSignatureSpan">nats.</span>connect
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (opts) {
+  return new Client(opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+npm install nats
+```
+
+## Basic Usage
+
+```javascript
+var NATS = require('nats');
+var nats = NATS.<span class="apidocCodeKeywordSpan">connect</span>();
+
+// Simple Publisher
+nats.publish('foo', 'Hello World!');
+
+// Simple Subscriber
+nats.subscribe('foo', function(msg) {
+console.log('Received a message: ' + msg);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.createInbox" id="apidoc.element.nats.createInbox">
+        function <span class="apidocSignatureSpan">nats.</span>createInbox
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInbox = function () {
+  return ("_INBOX." + nuid.next());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  nc.publish('foo', data);
+});
+
+it('should include the correct reply in the callback', function(done) {
+  var nc = NATS.connect(PORT);
+  var data = 'Hello World';
+  var inbox = nc.<span class="apidocCodeKeywordSpan">createInbox</span>();
+  nc.subscribe('foo', function(msg, reply) {
+    should.exist(msg);
+    msg.should.equal(data);
+    should.exist(reply);
+    reply.should.equal(inbox);
+    nc.close();
+    done();
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nats.NatsError" id="apidoc.module.nats.NatsError">module nats.NatsError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nats.NatsError.NatsError" id="apidoc.element.nats.NatsError.NatsError">
+        function <span class="apidocSignatureSpan">nats.</span>NatsError
+        <span class="apidocSignatureSpan">(message, code, chainedError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NatsError(message, code, chainedError) {
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.code = code;
+  this.chainedError = chainedError;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  nc.close();
+  // Closed
+  (function() { nc.subscribe('foo'); }).should.throw(Error);
+  done();
+});
+
+it ('NatsErrors have code', function() {
+  var err = new NATS.<span class="apidocCodeKeywordSpan">NatsError</span>("hello", "helloid");
+  should.equal(err.message, 'hello');
+  should.equal(err.code, 'helloid');
+});
+
+it ('NatsErrors can chain an error', function() {
+  var srcErr = new Error('foo');
+  var err = new NATS.NatsError("hello", "helloid", srcErr);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.NatsError.super_" id="apidoc.element.nats.NatsError.super_">
+        function <span class="apidocSignatureSpan">nats.NatsError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nats.NatsError.super_" id="apidoc.module.nats.NatsError.super_">module nats.NatsError.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nats.NatsError.super_.super_" id="apidoc.element.nats.NatsError.super_.super_">
+        function <span class="apidocSignatureSpan">nats.NatsError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.NatsError.super_.captureStackTrace" id="apidoc.element.nats.NatsError.super_.captureStackTrace">
+        function <span class="apidocSignatureSpan">nats.NatsError.super_.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  //Q_SUB = /^([^\.\*&gt;\s]+|&gt;$|\*)(\.([^\.\*&gt;\s]+|&gt;$|\*))*$/, // TODO: remove / never used
+  //Q_SUB_NO_WC = /^([^\.\*&gt;\s]+)(\.([^\.\*&gt;\s]+))*$/, // TODO: remove / never used
+
+  FLUSH_THRESHOLD = 65536;
+
+
+function NatsError(message, code, chainedError) {
+  Error.<span class="apidocCodeKeywordSpan">captureStackTrace</span>(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.code = code;
+  this.chainedError = chainedError;
+}
+
+util.inherits(NatsError, Error);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nats.nats" id="apidoc.module.nats.nats">module nats.nats</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nats.nats.NatsError" id="apidoc.element.nats.nats.NatsError">
+        function <span class="apidocSignatureSpan">nats.nats.</span>NatsError
+        <span class="apidocSignatureSpan">(message, code, chainedError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NatsError(message, code, chainedError) {
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.code = code;
+  this.chainedError = chainedError;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  nc.close();
+  // Closed
+  (function() { nc.subscribe('foo'); }).should.throw(Error);
+  done();
+});
+
+it ('NatsErrors have code', function() {
+  var err = new NATS.<span class="apidocCodeKeywordSpan">NatsError</span>("hello", "helloid");
+  should.equal(err.message, 'hello');
+  should.equal(err.code, 'helloid');
+});
+
+it ('NatsErrors can chain an error', function() {
+  var srcErr = new Error('foo');
+  var err = new NATS.NatsError("hello", "helloid", srcErr);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.nats.connect" id="apidoc.element.nats.nats.connect">
+        function <span class="apidocSignatureSpan">nats.nats.</span>connect
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (opts) {
+  return new Client(opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+npm install nats
+```
+
+## Basic Usage
+
+```javascript
+var NATS = require('nats');
+var nats = NATS.<span class="apidocCodeKeywordSpan">connect</span>();
+
+// Simple Publisher
+nats.publish('foo', 'Hello World!');
+
+// Simple Subscriber
+nats.subscribe('foo', function(msg) {
+console.log('Received a message: ' + msg);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nats.nats.createInbox" id="apidoc.element.nats.nats.createInbox">
+        function <span class="apidocSignatureSpan">nats.nats.</span>createInbox
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInbox = function () {
+  return ("_INBOX." + nuid.next());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  nc.publish('foo', data);
+});
+
+it('should include the correct reply in the callback', function(done) {
+  var nc = NATS.connect(PORT);
+  var data = 'Hello World';
+  var inbox = nc.<span class="apidocCodeKeywordSpan">createInbox</span>();
+  nc.subscribe('foo', function(msg, reply) {
+    should.exist(msg);
+    msg.should.equal(data);
+    should.exist(reply);
+    reply.should.equal(inbox);
+    nc.close();
+    done();
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
